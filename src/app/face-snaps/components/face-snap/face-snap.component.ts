@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { FaceSnap } from '../../../core/models/face-snap.model';
-import { FaceSnapsService } from '../../../core/services/face-snaps.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import {Component, Input} from '@angular/core';
+import {FaceSnap} from '../../../core/models/face-snap.model';
+import {FaceSnapsService} from '../../../core/services/face-snaps.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-face-snap',
@@ -11,23 +11,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class FaceSnapComponent {
 
-  constructor(private _faceService : FaceSnapsService,
-    private _router: Router){
+  constructor(private _faceService: FaceSnapsService,
+              private _router: Router) {
 
   }
 
-@Input() faceSnap! : FaceSnap
+  @Input() faceSnap!: FaceSnap
 
   // "!" Promise to initialize the attributes
-  snapped : boolean = false;
+  snapped: boolean = false;
 
   onChangeSnap() {
     this._faceService.changeSnaps(this.faceSnap.id, this.snapped);
     this.snapped = !this.snapped;
   }
 
-  onView(){
-    this._router.navigateByUrl(`faceSnap/${this.faceSnap.id}`)
+  onView() {
+    this._router.navigateByUrl(`facesnaps/${this.faceSnap.id}`)
   }
 
 

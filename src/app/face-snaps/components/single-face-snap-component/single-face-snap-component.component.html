@@ -1,30 +1,30 @@
 <div class="container">
-    <div class="main">
-        <div class="face-snap-card" *ngIf="$faceSnap | async as faceSnap">
-            <h2 class="m-05"> {{ faceSnap.title | uppercase }} </h2>
-            <p class="ml-05 gray text-small"> Mis en ligne le {{
-                faceSnap.createdDate | date: 'à HH:mm, le d MMMM yyyy'}} </p>
-            <img class="img m-1" [src]="faceSnap.imageUrl" [alt]="faceSnap.title ">
-            <div class="bottom">
-                <div class="grid-center mb-1 "
-                    [ngClass]="{ 'bottom-snap-grid-3': faceSnap.location, 'bottom-snap-grid-2': !faceSnap.location }">
-                    <span class="text-italic"> {{ faceSnap.description }} </span>
-                    <p *ngIf="faceSnap.location">
-                        <img src="../../../../assets/img/location.png">
-                        {{faceSnap.location}}
-                    </p>
-                    <p class="text-medium">
-                        <span
-                            [ngStyle]="{ color:'rgb( 0,' + faceSnap.snaps *7 + ' ,0  )' }">
-                            <button [ngClass]="{'btn': !snapped, 'btn-2': snapped}"
-                                (click)="onChangeSnap(faceSnap.id)"> {{ snapped ? 'Oops Snap!' : 'Oh Snap!' }} </button>
-                               {{ faceSnap.snaps }} ❤</span>
-                    </p>
-                </div>
-                <div class="back">
-                    <a routerLink="/facesnaps" class="btn text-italic mb-1">Go back</a>
-                </div>
-            </div>
+  <div class="main">
+    <div class="face-snap-card" *ngIf="$faceSnap | async as faceSnap">
+      <h2 class="m-05"> {{ faceSnap.title | uppercase }} </h2>
+      <p class="ml-05 gray text-small"> Mis en ligne le {{
+        faceSnap.createdDate | date: 'à HH:mm, le d MMMM yyyy'}} </p>
+      <img class="img m-1" [src]="faceSnap.imageUrl" [alt]="faceSnap.title ">
+      <div class="bottom">
+        <div class="grid-center mb-1 "
+             [ngClass]="{ 'bottom-snap-grid-3': faceSnap.location, 'bottom-snap-grid-2': !faceSnap.location }">
+          <span class="text-italic"> {{ faceSnap.description }} </span>
+          <p *ngIf="faceSnap.location">
+            <img src="../../../../assets/img/location.png">
+            {{faceSnap.location}}
+          </p>
+          <p class="text-medium">
+            <span [ngStyle]="{ color:'rgb( 0,' + faceSnap.snaps *7 + ' ,0  )' }">
+                <button [ngClass]="{'btn': !snapped, 'btn-2': snapped}"
+                        (click)="onChangeSnap(faceSnap.id)"> {{ this.snapped ? 'Oops Snap!' : 'Oh Snap!' }} </button>
+
+              {{ faceSnap.snaps }} ❤</span>
+          </p>
         </div>
+        <div class="back">
+          <a routerLink="/facesnaps" class="btn text-italic mb-1">Go back</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
