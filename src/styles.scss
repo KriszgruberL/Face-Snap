@@ -1,0 +1,141 @@
+/* You can add global styles to this file, and also import other style files */
+
+$dark : #382740;
+$dark80 : #382740da;
+$darker : #221726;
+$accent : #FEC995;
+$pink : #D97789;
+$orange : #F2A88D;
+$disabled : #f2a88da4;
+$white : #f7f2ed;
+
+
+* {
+  font-family: Roboto, Helvetica, sans-serif;
+  color: $white;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #f7f2ed, #f7f2ed, #f7f2ed, #f7f2ed, #f7f2ed, #f7f0ea, #f7efe8, #f7ede5, #f8e9df, #f9e5da, #fbe0d5, #fcdcd1);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: auto;
+}
+
+.btn {
+  background-color: $orange;
+  color: $dark;
+
+  border: 1px solid $darker;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 0.2rem;
+
+  &:hover {
+    background-color: $accent;
+  }
+
+  &:active {
+    box-shadow: inset -3px -3px 3px 0px rgba(0, 0, 0, 0.22);
+  }
+
+  &:disabled {
+    background-color: $disabled;
+    box-shadow: none
+  }
+
+  &-2 {
+    @extend .btn;
+    background-color: $pink;
+    color: #382740;
+  }
+}
+
+input, select, textarea {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem auto;
+  border: 1px solid $dark;
+  border-radius: 0.75rem;
+  font-size: medium;
+
+  color: $dark;
+
+  &:focus{
+    outline: 2px solid $accent;
+  }
+
+}
+
+.ml {
+  &-05 {
+    margin-left: 0.5rem;
+  }
+
+  &-1 {
+    margin-left: 1rem;
+  }
+
+  &-2 {
+    margin-left: 2rem;
+  }
+}
+
+.mb {
+  &-1 {
+    margin-bottom: 1rem;
+  }
+  &-2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.m {
+  &-05 {
+    margin: 0.5rem auto;
+  }
+  &-1 {
+    margin: 1rem auto;
+  }
+  &-2 {
+    margin: 2rem auto;
+  }
+}
+
+.text {
+  &-small {
+    font-size: smaller;
+  }
+
+  &-medium{
+    font-size: small;
+  }
+
+  &-align-right{
+    text-align: end;
+  }
+
+  &-center{
+    text-align: center;
+  }
+
+  &-italic {
+    font-style: italic;
+}
+}

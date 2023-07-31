@@ -1,0 +1,48 @@
+
+
+<div class="container">
+    <div class="main">
+
+        <div class="face-snap-card">
+            <h2>Nouveau FaceSnap</h2>
+            <form class="center m-05" [formGroup]="snapForm">
+                <input type="text" placeholder="Titre" formControlName="title">
+                <textarea name="description" placeholder="Description du Snap"
+                    rows="4" formControlName="description"></textarea>
+                <input type="text" placeholder="Url de l'image"
+                    formControlName="imageUrl">
+                <input type="text" placeholder="Localisation"
+                    formControlName="location">
+            </form>
+            <div class="center mb-1">
+                <button class=" btn" type="submit" (click)="onSubmitForm()" [disabled]="snapForm.invalid">Ajouter
+                    le Snap ╰(*°▽°*)╯</button>
+            </div>
+        </div>
+        <!-- ----------------------------------------------------------------------- -->
+        <div *ngIf="$preview | async as faceSnap" class="face-snap-card">
+            <h2 class="m-05"> {{ faceSnap.title | uppercase }} </h2>
+            <p class="ml-05 gray text-small"> Mis en ligne le {{
+                faceSnap.createdDate | date: 'à HH:mm, le d MMMM yyyy'}} </p>
+            <img class="img m-1" [src]="faceSnap.imageUrl"
+                [alt]="faceSnap.title ">
+            <div class="bottom">
+                <div class="grid-center mb-1 "
+                    [ngClass]="{ 'bottom-snap-grid-3': faceSnap.location, 'bottom-snap-grid-2': !faceSnap.location }">
+                    <span class="text-italic"> {{ faceSnap.description }}</span>
+                    <p *ngIf="faceSnap.location">
+                        <img src="assets/img/location.png">
+                        {{faceSnap.location}}
+                    </p>
+                    <p class="text-medium">
+                        <span
+                            [ngStyle]="{ color:'rgb( 0,' + faceSnap.snaps *7 + ' ,0  )' }">
+                            <button class="btn"> Oh Snap!</button>
+                            {{ faceSnap.snaps }} ❤
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

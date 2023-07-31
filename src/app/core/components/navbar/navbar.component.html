@@ -1,0 +1,14 @@
+
+<header>
+    <nav>
+        <ul>
+            <h3>Face-Snap 💖</h3>
+            <div class="flex">
+                <li *ngFor="let link of links">
+                    <a [routerLink]="link.url" >{{link.title}} </a>
+                </li>
+                <button class="btn" (click)="onAdd()"><img src="assets/img/plus.png" class="icon" alt="+"></button>
+            </div>
+        </ul>
+    </nav>
+</header>

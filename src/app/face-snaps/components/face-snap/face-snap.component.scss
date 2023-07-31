@@ -1,0 +1,43 @@
+$dark : #382740;
+$dark80 : #382740da;
+$darker : #221726;
+$accent : #FEC995;
+$pink : #D97789;
+$orange : #F2A88D;
+$white : #f7f2ed;
+$gray : #b0a6b2 ;
+
+
+.face-snap-card {
+    width: 60%;
+    background-color: $dark80;
+    border: 1px solid $darker;
+    border-radius: 20px;
+
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    box-shadow: 5px 5px 5px 0px rgba(128, 128, 128, 0.658);
+
+    h2 {
+        text-align: center;
+    }
+    
+    .view {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+        
+        .btn {
+            text-align: center;
+            font-size: larger;
+            padding: 0.2rem 0.5rem;
+            width: 50%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+    
+}

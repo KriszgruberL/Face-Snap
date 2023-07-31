@@ -1,0 +1,90 @@
+$dark : #382740;
+$dark80 : #382740da;
+$darker : #221726;
+$accent : #FEC995;
+$pink : #D97789;
+$orange : #F2A88D;
+$white : #f7f2ed;
+$gray : #b0a6b2;
+
+
+.face-snap-card {
+    width: 60%;
+    background-color: $dark80;
+    border: 1px solid $darker;
+    border-radius: 20px;
+
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    box-shadow: 5px 5px 5px 0px rgba(128, 128, 128, 0.658);
+
+    h2 {
+        text-align: center;
+    }
+
+    .gray {
+        color: $gray;
+    }
+
+    .img {
+        width: 100%;
+        border-radius: 20px;
+        border: 2px solid $dark;
+        box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.22);
+    }
+
+    .small-img {
+        width: 30px;
+    }
+
+    .icon {
+        width: 20%;
+    }
+
+    .bottom {
+        width: 90%;
+        margin: 0 auto;
+
+        .grid-center {
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
+
+        .bottom-snap-grid {
+            display: grid;
+            grid-template-rows: 0.2fr;
+            column-gap: 10px;
+
+            &-3 {
+                @extend .bottom-snap-grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &-2 {
+                @extend .bottom-snap-grid;
+                grid-template-columns: 1fr 0.5fr;
+                justify-content: space-around;
+            }
+        }
+
+        .back {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            
+            .btn {
+                text-align: center;
+                font-size: larger;
+                padding: 0.2rem 0.5rem;
+                width: 50%;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}

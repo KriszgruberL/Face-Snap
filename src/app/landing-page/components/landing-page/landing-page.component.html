@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="main">
+        
+        <article class="grid mb-1">
+            <div class="row-1 bg-darker">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni eos voluptatibus temporibus laboriosam fugit assumenda blanditiis cupiditate odio tempora alias, nobis, sint amet dolorem aperiam repellat aut in quisquam corporis.</div>
+            <section class="row-2 bg-dark80">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nostrum asperiores nemo alias suscipit temporibus repellat corporis! Obcaecati nesciunt architecto, eveniet doloremque minima possimus laborum fuga, quos quia dolore nulla. 
+           
+            </section>
+            <section class="row-3 bg-dark80">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum sapiente aliquid modi adipisci sit numquam eaque doloremque vitae hic eveniet enim et voluptates minima velit voluptatem iusto, in fuga nam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur error ut, excepturi dolores consequuntur aperiam omnis quisquam. Saepe nihil similique dolorem exercitationem quo rerum corrupti distinctio, quas esse earum optio?
+            </section>
+
+            <aside class="col-2 bg-darker">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae autem explicabo excepturi, ad temporibus rerum nesciunt voluptates necessitatibus quisquam at perferendis architecto magnam ullam ut, beatae dolor voluptas id hic.</aside>
+        </article>
+        <div class="bg-dark80 news">
+            <div class="text-center">
+                <p>Tu veux suivre l'évolution de ce projet ? Inscris-toi à notre newsletter</p>
+            </div>
+            <!-- Référence locale à la directive NgForm avec #newsLetterForm="ngForm", renvoie le formulaire entier sous forme d'objet-->
+            <form #newsLetterForm="ngForm" (ngSubmit)="onSubmitForm(newsLetterForm)">
+                <input type="email" placeholder="mon@mail.com"  [(ngModel)]="userMail" name="userMail">
+                <button class="btn" type="submit" > (≧∇≦)b OK ! </button>
+            </form>
+        </div>
+    </div>
+</div>

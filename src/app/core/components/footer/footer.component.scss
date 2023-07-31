@@ -1,0 +1,32 @@
+$dark : #382740;
+$dark80 : #382740da;
+$darker : #221726;
+$accent : #FEC995;
+$pink : #D97789;
+$orange : #F2A88D;
+$white : #f7f2ed;
+
+
+
+.container {
+    width: 100%;
+}
+
+footer {
+    height: 4rem;
+    margin: 1rem auto;
+    width: 70%;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #382740b1;
+
+
+    p {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+}

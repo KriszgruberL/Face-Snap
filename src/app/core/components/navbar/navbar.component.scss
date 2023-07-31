@@ -1,0 +1,65 @@
+p {
+    color: whitesmoke;
+}
+
+
+$dark : #382740;
+$dark80 : #382740da;
+$darker : #221726;
+$accent : #FEC995;
+$pink : #D97789;
+$orange : #F2A88D;
+$white : #f7f2ed;
+$gray : #b0a6b2 ;
+
+
+header {
+    background-color: $darker ;
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+}
+
+nav {
+    padding: 1rem 2rem;
+    height: 100%;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    margin: 0.6rem 0;
+    padding: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    user-select: none;
+
+    &:hover {
+        color: $pink;
+        border-bottom: 1px solid $white;
+        padding-bottom: 0.1rem;
+    }
+
+    &:active {
+        border-bottom: none;
+    }
+
+}
+
+.icon{
+    width: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+
